@@ -7,7 +7,7 @@ This branch use getx package to manage state.
 ## Config flavor for Android & iOS
 - Tut Android: [Link - Vietnamese](https://viblo.asia/p/flutter-cai-dat-flavors-trong-flutter-phan-1-danh-cho-android-YWOZrGWElQ0)
 - Tut iOS: updating...
-
+Or [Tut for both Android & iOS](https://www.chwe.at/2020/10/flutter-flavors/)
 # Docs
 
 ### [GetX lib](https://github.com/jonataslaw/getx)

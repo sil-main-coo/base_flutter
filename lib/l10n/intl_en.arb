@@ -1,0 +1,12 @@
+{
+  "@@locale": "en",
+  "connectionTimedOut": "The connection has timed out. Please try again",
+  "connectionProblem": "There are some problems with the connection. Please try again",
+  "invalidCredentials": "Invalid credentials",
+  "responseNull": "Response is null",
+  "unKnowError": "Error! An error occurred. Please try again later. Please try again",
+  "deviceError": "Device error. Please try again",
+  "systemError": "System error. Please try again",
+  "failure": "Failure",
+  "error": "Error"
+}

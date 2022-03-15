@@ -1,0 +1,12 @@
+{
+  "@@locale": "vi",
+  "connectionTimedOut": "Đã quá thời gian kết nối. Vui lòng thử lại",
+  "connectionProblem": "Lỗi kết nối. Vui lòng thử lại",
+  "invalidCredentials": "Thông tin không hợp lệ",
+  "responseNull": "Không có phản hồi",
+  "unKnowError": "Đã xảy ra lỗi. Vui lòng thử lại",
+  "deviceError": "Lỗi từ thiết bị. Vui lòng thử lại",
+  "failure": "Thất bại",
+  "error": "Lỗi",
+  "systemError": "Lỗi hệ thống. Vui lòng thử lại"
+}

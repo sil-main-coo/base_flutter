@@ -1,10 +1,11 @@
 # Use flutter version: ^2.8.1
 
 The architecture of project is fixed. You can implement any state manager if you want.
+This branch use getx package to manage state.
 
 # Setup steps
 ## Config flavor for Android & iOS
-- Tut Android: [Link](https://viblo.asia/p/flutter-cai-dat-flavors-trong-flutter-phan-1-danh-cho-android-YWOZrGWElQ0)
+- Tut Android: [Link - Vietnamese](https://viblo.asia/p/flutter-cai-dat-flavors-trong-flutter-phan-1-danh-cho-android-YWOZrGWElQ0)
 - Tut iOS: updating...
 
 # Docs

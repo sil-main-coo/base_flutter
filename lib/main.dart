@@ -12,7 +12,7 @@ void main() {
 
 class Main extends Env {
   @override
-  FutureOr<StatelessWidget> onCreate() async {
+  FutureOr<Widget> onCreate() async {
     ErrorWidget.builder = (FlutterErrorDetails details) {
       Zone.current.handleUncaughtError(details.exception, details.stack!);
       return Container(color: Colors.transparent);

@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:base_flutter/@core/di/di_module.dart';
@@ -39,7 +40,7 @@ abstract class Env {
 
       HttpOverrides.global = MyHttpOverrides(); // use in run zone
 
-      final StatelessWidget app = await onCreate(); // return init widget
+      final app = await onCreate(); // return init widget
       final wrapMultiScreen = ScreenUtilInit(
         designSize: AppDefaultConstants.designSize,
         builder: () => app,
@@ -48,8 +49,10 @@ abstract class Env {
       runApp(wrapMultiScreen);
       // ignore: deprecated_member_use
     }, onError: (Object obj, StackTrace stack) {
-      print(obj);
-      print(stack);
+      if (kDebugMode) {
+        print(obj);
+        print(stack);
+      }
     });
   }
 
@@ -63,5 +66,5 @@ abstract class Env {
 
   Future? onInitExternalService();
 
-  FutureOr<StatelessWidget> onCreate();
+  FutureOr<Widget> onCreate();
 }

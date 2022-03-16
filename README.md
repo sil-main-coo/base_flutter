@@ -80,6 +80,8 @@ flutter pub run build_runner build
 ### Localization
 Using this library to handle multi-languages. Follow this guide to understand and config languages files
 
+### Device Preview feature
+
 ### Hide Generated Files
 In-order to hide generated files, navigate to Android Studio -> Preferences -> Editor -> File Types and paste the below lines under ignore files and folders section:
 

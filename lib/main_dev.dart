@@ -1,4 +1,7 @@
 import 'dart:async';
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
+
 import '@core/environment/env.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +15,7 @@ void main() {
 
 class Main extends Env {
   @override
-  FutureOr<StatelessWidget> onCreate() async {
+  FutureOr<Widget> onCreate() async {
     ErrorWidget.builder = (FlutterErrorDetails details) {
       Zone.current.handleUncaughtError(details.exception, details.stack!);
       return Container(color: Colors.transparent);
@@ -20,9 +23,12 @@ class Main extends Env {
 
     await Style.styleDefault();
 
-    return const Application(
-      title: 'Base Stag',
-      locale: 'vi',
+    return DevicePreview(
+      enabled: !kReleaseMode,
+      builder: (context) =>const Application(
+        title: 'Base Stag',
+        locale: 'vi',
+      ),
     );
   }
 

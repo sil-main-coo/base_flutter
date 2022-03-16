@@ -12,7 +12,8 @@ class Application extends StatelessWidget {
   final String title;
   final String locale;
 
-  const Application({Key? key, required this.title, required this.locale})
+  const Application(
+      {Key? key, required this.title, required this.locale})
       : super(key: key);
 
   Widget _builder(BuildContext context, Widget? child) {
@@ -35,6 +36,7 @@ class Application extends StatelessWidget {
         child: MaterialApp(
           title: title,
           theme: AppThemes.defaultTheme(),
+          darkTheme: ThemeData.dark(),
           builder: (context, widget) => _builder(context, widget),
           localizationsDelegates: const [
             S.delegate,

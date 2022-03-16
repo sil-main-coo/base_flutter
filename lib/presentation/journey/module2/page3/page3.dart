@@ -9,10 +9,8 @@ class Page3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final state1 = context.read<StateManager1Cubit>();
-    final state2 = context.read<StateManager2Cubit>();
 
     print(state1.value1);
-    print(state1.value2);
 
     return Scaffold(
       appBar: AppBar(
@@ -23,16 +21,6 @@ class Page3 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(state1.value1 ?? 'null'),
-            RaisedButton(
-              onPressed: () {
-                state1.value1 = 'state 1 from 3';
-                state2.value2 = 'state 2 from 3';
-
-                print(state1.get());
-              },
-              child: const Text('Get value from state'),
-              color: Colors.blue,
-            )
           ],
         ),
       ),

@@ -25,6 +25,7 @@ dependencies:
   flutter_screenutil: ^5.3.1
   url_launcher: ^6.0.20 # config in native code
   package_info_plus: ^1.4.0
+  device_preview: ^1.0.0
 
   # State management
   flutter_bloc: ^8.0.1

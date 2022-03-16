@@ -4,16 +4,15 @@ import 'package:base_flutter/@core/di/di_module.dart';
 import 'package:base_flutter/@core/environment/build_config.dart';
 import 'package:base_flutter/@core/network/interceptor/auth_interceptor.dart';
 import 'package:base_flutter/@core/network/interceptor/token_interceptor.dart';
-import 'package:get/get.dart';
 
 class ApiModule extends DIModule {
   @override
   provides() async {
     final dio = await setup();
-    Get.put(()=> dio);
+    getIt.registerSingleton(dio);
     // register api
-    // Get.lazyPut(
-    //     () => AccountRemoteSource(dio, baseUrl: dio.options.baseUrl));
+    // getIt.registerFactory(
+    //         () => AccountRemoteSource(dio, baseUrl: dio.options.baseUrl));
   }
 
   static FutureOr<Dio> setup() async {

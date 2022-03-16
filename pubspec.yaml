@@ -27,7 +27,7 @@ dependencies:
   package_info_plus: ^1.4.0
 
   # State management
-  get: ^4.3.8
+  flutter_bloc: ^8.0.1
 
 dev_dependencies:
   flutter_test:

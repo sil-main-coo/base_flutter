@@ -2,11 +2,9 @@ import 'dart:async';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:base_flutter/@core/di/di_module.dart';
 import 'package:base_flutter/@core/network/http_overrides.dart';
 import 'package:base_flutter/commons/constants/app_default_constants.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'build_config.dart';
 
 abstract class Env {
@@ -28,11 +26,8 @@ abstract class Env {
       /// Init external service
       await onInitExternalService();
 
-      /// Init session storage
-      _onInitSessionStorage();
-
       /// Init local storage
-      await onInitLocalStorage();
+      await onInitInternalService();
 
       /// DI
       await onInjection();
@@ -55,11 +50,7 @@ abstract class Env {
 
   Future? onInjection();
 
-  Future? onInitLocalStorage();
-
-  void _onInitSessionStorage() {
-    getIt.registerSingletonAsync(() => SharedPreferences.getInstance());
-  }
+  Future? onInitInternalService();
 
   Future? onInitExternalService();
 

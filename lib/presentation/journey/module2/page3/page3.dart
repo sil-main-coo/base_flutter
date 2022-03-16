@@ -13,9 +13,10 @@ class Page3 extends StatelessWidget {
   Widget build(BuildContext context) {
     print(state1.value1);
     print(state1.value2);
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('Page 3'),
+        title: const Text('Page 3'),
       ),
       body: Center(
         child: Column(
@@ -28,7 +29,7 @@ class Page3 extends StatelessWidget {
                 state2.value2 = 'state 2 from 3';
                 print(state1.get());
               },
-              child: Text('click'),
+              child: const Text('Get state 1 and state 2'),
               color: Colors.blue,
             )
           ],

@@ -11,7 +11,8 @@ class Application extends StatelessWidget {
   final String title;
   final String locale;
 
-  Application({required this.title, required this.locale});
+  const Application({Key? key, required this.title, required this.locale})
+      : super(key: key);
 
   Widget _builder(BuildContext context, Widget? child) {
     return MediaQuery(
@@ -32,7 +33,7 @@ class Application extends StatelessWidget {
         initialRoute: AppRoute.INITIAL,
         getPages: AppRoute.pages,
         builder: (context, widget) => _builder(context, widget),
-        localizationsDelegates: [
+        localizationsDelegates: const [
           S.delegate,
           GlobalMaterialLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,

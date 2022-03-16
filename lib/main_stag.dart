@@ -20,7 +20,7 @@ class Main extends Env {
 
     await Style.styleDefault();
 
-    return Application(
+    return const Application(
       title: 'Base Stag',
       locale: 'vi',
     );
@@ -33,5 +33,5 @@ class Main extends Env {
   Future? onInjection() => Injection.inject();
 
   @override
-  Future? onInitLocalStorage() => null;
+  Future? onInitInternalService() => null;
 }

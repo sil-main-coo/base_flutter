@@ -6,5 +6,4 @@ class Module2Binding implements Bindings {
   void dependencies() {
     Get.lazyPut<StateManager2>(() => StateManager2());
   }
-
 }

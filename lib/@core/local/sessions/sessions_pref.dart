@@ -1,4 +1,4 @@
-import 'package:base_flutter/@core/di/di_module.dart';
+import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 
@@ -11,24 +11,24 @@ class SessionPref {
       {required String accessToken,
       required String refreshToken,
       required String userName}) {
-    var preferencesManager = getIt.get<SharedPreferences>();
+    var preferencesManager = Get.find<SharedPreferences>();
     preferencesManager.setString(keyAccessToken, accessToken);
     preferencesManager.setString(keyRefreshToken, refreshToken);
     preferencesManager.setString(keyUserName, userName);
   }
 
   static String? getUserName() =>
-      getIt.get<SharedPreferences>().getString(keyUserName);
+      Get.find<SharedPreferences>().getString(keyUserName);
 
   static String? getAccessToken() =>
-      getIt.get<SharedPreferences>().getString(keyAccessToken);
+      Get.find<SharedPreferences>().getString(keyAccessToken);
 
   static String? getRefreshToken() =>
-      getIt.get<SharedPreferences>().getString(keyRefreshToken);
+      Get.find<SharedPreferences>().getString(keyRefreshToken);
 
   static bool isSessionValid() {
     try {
-      return getIt.get<SharedPreferences>()
+      return Get.find<SharedPreferences>()
               .getString(keyAccessToken)
               ?.isNotEmpty ==
           true;
@@ -39,7 +39,7 @@ class SessionPref {
 
   static Future<void> removeUserName() async {
     // await getIt.get<SharedPreferencesManager>().clear();
-    final prefs = getIt.get<SharedPreferences>();
+    final prefs = Get.find<SharedPreferences>();
 
     await prefs.remove(keyUserName);
     await prefs.remove(keyAccessToken);
@@ -47,7 +47,7 @@ class SessionPref {
   }
 
   static Future<void> removeTokenUserData() async {
-    final prefs = getIt.get<SharedPreferences>();
+    final prefs = Get.find<SharedPreferences>();
     await prefs.remove(keyAccessToken);
     await prefs.remove(keyRefreshToken);
   }

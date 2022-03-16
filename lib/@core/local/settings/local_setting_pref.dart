@@ -1,4 +1,5 @@
 import 'package:base_flutter/@core/di/di_module.dart';
+import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class LocalSettingsPref {
@@ -6,7 +7,7 @@ class LocalSettingsPref {
   static const String keyFirstSetupNotify = 'key_first_setup_notify';
 
   static bool isFirstTime() {
-    final prefs = getIt.get<SharedPreferences>();
+    final prefs = Get.find<SharedPreferences>();
 
     var isFirstTime = prefs.getBool(keyFirstRun);
     if (isFirstTime != null && !isFirstTime) {
@@ -19,7 +20,7 @@ class LocalSettingsPref {
   }
 
   static bool isFirstNotifySetting() {
-    final prefs = getIt.get<SharedPreferences>();
+    final prefs = Get.find<SharedPreferences>();
 
     var isFirstTime = prefs.getBool(keyFirstSetupNotify);
     if (isFirstTime != null && !isFirstTime) {
@@ -32,6 +33,6 @@ class LocalSettingsPref {
   }
 
   static void resetFirstNotifySetting() {
-    getIt.get<SharedPreferences>().setBool(keyFirstSetupNotify, true);
+    Get.find<SharedPreferences>().setBool(keyFirstSetupNotify, true);
   }
 }

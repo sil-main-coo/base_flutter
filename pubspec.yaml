@@ -20,7 +20,6 @@ dependencies:
   intl: ^0.17.0
   logging: ^1.0.1
   shared_preferences: ^2.0.13
-  get_it: ^7.2.0
   flutter_svg: ^1.0.3
   flutter_screenutil: ^5.3.1
   url_launcher: ^6.0.20 # config in native code

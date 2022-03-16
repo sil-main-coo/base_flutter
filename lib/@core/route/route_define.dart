@@ -16,6 +16,7 @@ class Path {
   List<BlocProvider> Function(BuildContext context)? providers;
   Widget page;
 
+
   Path({required this.name, required this.page, this.providers});
 
   Map<String, WidgetBuilder> path() => {

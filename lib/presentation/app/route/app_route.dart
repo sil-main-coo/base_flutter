@@ -16,9 +16,6 @@ class AppRoute{
 
     generateRoute(routeBuilders, settings);
 
-    print('settings.name: ${settings.name}');
-    print('routeBuilders?[settings.name ?? ""]: ${routeBuilders?[settings.name ?? ""]}');
-
     final Widget Function(BuildContext context)? routeBuilder =
     routeBuilders?[settings.name ?? ""];
 

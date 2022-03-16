@@ -1,7 +1,7 @@
 # Use flutter version: ^2.8.1
 
 The architecture of project is fixed. You can implement any state manager if you want.
-This branch use Cubit package to manage state.
+**This branch use Cubit package to manage state.**
 
 # Setup steps
 ## Config flavor for Android & iOS

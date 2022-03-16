@@ -20,8 +20,8 @@ class Main extends Env {
 
     await Style.styleDefault();
 
-    return Application(
-      title: 'Base',
+    return const Application(
+      title: 'Base Stag',
       locale: 'vi',
     );
   }

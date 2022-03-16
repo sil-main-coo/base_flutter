@@ -1,7 +1,7 @@
 # Use flutter version: ^2.8.1
 
 The architecture of project is fixed. You can implement any state manager if you want.
-This branch use getx package to manage state.
+This branch use Cubit package to manage state.
 
 # Setup steps
 ## Config flavor for Android & iOS
@@ -10,15 +10,15 @@ This branch use getx package to manage state.
 Or [Tut for both Android & iOS](https://www.chwe.at/2020/10/flutter-flavors/)
 # Docs
 
-### [GetX lib](https://github.com/jonataslaw/getx)
-![image](https://raw.githubusercontent.com/jonataslaw/getx-community/master/getx.png)
+### [cubit lib](https://pub.dev/packages/flutter_bloc)
+![image](https://raw.githubusercontent.com/felangel/bloc/master/docs/assets/flutter_bloc_logo_full.png)
 
 ### DI pattern
 `Dependency Injection` is a great design pattern that allows us to eliminate rigid dependencies between elements and it makes the application more flexible, easy to expand scales and maintain.
-In the project we use Plugin `getX` to implement DI and we have also defined classes so you can easily implement `DI` in the `DI layer`.
+In the project we use Plugin `getIt` to implement DI and we have also defined classes so you can easily implement `DI` in the `DI layer`.
 
 ### Routes
-We use [GetX route management](https://github.com/jonataslaw/getx/blob/master/documentation/en_US/route_management.md) to manager routers and use `Getx bindings` for provide dependencies of that route.
+We use `onGenerateRoute` to manager routers and use `BlocProvider` for provide dependencies of specify route.
 
 ### Network.
      * Project can use retrofit to work with the alternative network for http.

@@ -1,8 +1,10 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:base_flutter/presentation/app/global_state/state1/state_manager_1_cubit.dart';
 import 'package:base_flutter/presentation/journey/module2/module2_route.dart';
 import 'package:base_flutter/presentation/journey/module2/state_manager/state_manager_2_cubit.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 
 class Page1 extends StatelessWidget {
   const Page1({Key? key}) : super(key: key);

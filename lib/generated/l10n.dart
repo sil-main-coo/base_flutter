@@ -139,6 +139,36 @@ class S {
       args: [],
     );
   }
+
+  /// `Thử lại`
+  String get tryAgain {
+    return Intl.message(
+      'Thử lại',
+      name: 'tryAgain',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chọn`
+  String get select {
+    return Intl.message(
+      'Chọn',
+      name: 'select',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Hủy`
+  String get cancel {
+    return Intl.message(
+      'Hủy',
+      name: 'cancel',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

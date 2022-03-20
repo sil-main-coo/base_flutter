@@ -8,5 +8,8 @@
   "deviceError": "Lỗi từ thiết bị. Vui lòng thử lại",
   "failure": "Thất bại",
   "error": "Lỗi",
-  "systemError": "Lỗi hệ thống. Vui lòng thử lại"
+  "systemError": "Lỗi hệ thống. Vui lòng thử lại",
+  "tryAgain": "Thử lại",
+  "select": "Chọn",
+  "cancel": "Hủy"
 }

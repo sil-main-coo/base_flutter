@@ -8,5 +8,8 @@
   "deviceError": "Device error. Please try again",
   "systemError": "System error. Please try again",
   "failure": "Failure",
-  "error": "Error"
+  "error": "Error",
+  "tryAgain": "Try again",
+  "select": "Select",
+  "cancel": "Cancel"
 }

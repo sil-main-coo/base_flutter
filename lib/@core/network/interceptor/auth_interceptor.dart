@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:base_flutter/@core/local/sessions/sessions_pref.dart';
 
-/// authentication by token
 class AuthInterceptor extends Interceptor {
   static const String X_API_KEY = 'x-api-key';
   static const String ACCESS_TOKEN = 'Authorization';

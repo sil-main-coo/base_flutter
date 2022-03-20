@@ -1,0 +1,113 @@
+part of 'export.dart';
+
+class Dimens {
+  static const double zero = 0;
+  static const double btn_height = 0;
+
+  static const double radius_4 = 4;
+  static const double radius_6 = 6;
+  static const double radius_8 = 8;
+  static const double radius_10 = 10;
+  static const double radius_12 = 12;
+  static const double radius_15 = 15;
+  static const double radius_16 = 16;
+  static const double radius_20 = 20;
+  static const double radius_25 = 25;
+
+  // Spacing
+  static double space_2 = 2.sp;
+  static double space_3 = 3.sp;
+  static double space_5 = 5.sp;
+  static double space_8 = 8.sp;
+  static double space_10 = 10.sp;
+  static double space_11 = 11.sp;
+  static double space_12 = 12.sp;
+  static double space_13 = 13.sp;
+  static double space_14 = 14.sp;
+  static double space_15 = 15.sp;
+  static double space_16 = 16.sp;
+  static double space_17 = 17.sp;
+  static double space_18 = 18.sp;
+  static double space_20 = 20.sp;
+  static double space_22 = 22.sp;
+  static double space_24 = 24.sp;
+  static double space_26 = 26.sp;
+  static double space_28 = 28.sp;
+  static double space_30 = 30.sp;
+  static double space_32 = 32.sp;
+  static double space_34 = 34.sp;
+  static double space_36 = 36.sp;
+  static double space_40 = 40.sp;
+  static double space_44 = 44.sp;
+  static double space_48 = 48.sp;
+  static double space_52 = 52.sp;
+  static double space_66 = 66.sp;
+  static double space_80 = 80.sp;
+  static double space_88 = 88.sp;
+  static double space_100 = 100.sp;
+  static double space_120 = 120.sp;
+
+  // Height
+  static double height_3 = 3.h;
+  static double height_4 = 4.h;
+  static double height_8 = 8.h;
+  static double height_10 = 10.h;
+  static double height_11 = 11.h;
+  static double height_12 = 12.h;
+  static double height_14 = 14.h;
+  static double height_16 = 16.h;
+  static double height_17 = 17.h;
+  static double height_18 = 18.h;
+  static double height_19 = 19.h;
+  static double height_20 = 20.h;
+  static double height_23 = 23.h;
+  static double height_24 = 24.h;
+  static double height_25 = 25.h;
+  static double height_26 = 26.h;
+  static double height_27 = 27.h;
+  static double height_28 = 28.h;
+  static double height_30 = 30.h;
+  static double height_32 = 32.h;
+  static double height_35 = 35.h;
+  static double height_36 = 36.h;
+  static double height_38 = 38.h;
+  static double height_40 = 40.h;
+  static double height_41 = 41.h;
+  static double height_45 = 45.h;
+  static double height_48 = 48.h;
+  static double height_53 = 53.h;
+  static double height_56 = 56.h;
+  static double height_60 = 60.h;
+  static double height_64 = 64.h;
+  static double height_84 = 84.h;
+  static double height_90 = 90.h;
+  static double height_100 = 100.h;
+  static double height_104 = 104.h;
+  static double height_120 = 120.h;
+  static double height_149 = 149.h;
+  static double height_192 = 192.h;
+
+  // Width
+  static double width_4 = 4.w;
+  static double width_5 = 5.w;
+  static double width_6 = 6.w;
+  static double width_8 = 8.w;
+  static double width_10 = 10.w;
+  static double width_12 = 12.w;
+  static double width_16 = 16.w;
+  static double width_18 = 18.w;
+  static double width_20 = 20.w;
+  static double width_21 = 21.w;
+  static double width_24 = 24.w;
+  static double width_27 = 27.w;
+  static double width_30 = 30.w;
+  static double width_34 = 34.w;
+  static double width_40 = 40.w;
+  static double width_50 = 50.w;
+  static double width_60 = 60.w;
+  static double width_64 = 64.w;
+  static double width_102 = 102.w;
+  static double width_140 = 140.w;
+  static double width_155 = 155.w;
+  static double width_180 = 180.w;
+}

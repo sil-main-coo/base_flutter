@@ -1,16 +1,15 @@
 import 'package:base_flutter/di/module/api_module.dart';
 import 'package:base_flutter/di/module/bloc_module.dart';
-import 'package:base_flutter/di/module/components_module.dart';
+import 'package:base_flutter/di/module/shared_module.dart';
 import 'package:base_flutter/di/module/local_module.dart';
 import 'package:base_flutter/di/module/repo_module.dart';
 
 class Injection {
   static Future inject() async {
-    ComponentsModule().provides();
+    SharedModule().provides();
     await LocalModule().provides();
     await ApiModule().provides();
     RepoModule().provides();
-    // await UseCaseModule().provides();
     BlocModule().provides();
   }
 }

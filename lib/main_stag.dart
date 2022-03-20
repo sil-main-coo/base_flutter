@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'di/injection/injection.dart';
 import 'presentation/app/app.dart';
-import 'presentation/app/styles/style.dart';
+import 'presentation/app/styles/themes/default/export.dart';
 
 void main() {
   Main();
@@ -18,7 +18,7 @@ class Main extends Env {
       return Container(color: Colors.transparent);
     };
 
-    await Style.styleDefault();
+    await LightStyle.getStyle();
 
     return const Application(
       title: 'Base Stag',

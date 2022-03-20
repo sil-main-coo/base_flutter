@@ -1,6 +1,5 @@
 import 'package:base_flutter/@core/di/di_module.dart';
 import 'package:base_flutter/@core/route/route_define.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'page2/page2.dart';
 import 'page3/page3.dart';

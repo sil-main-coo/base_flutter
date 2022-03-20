@@ -7,13 +7,15 @@ import 'package:flutter/material.dart';
 
 import 'di/injection/injection.dart';
 import 'presentation/app/app.dart';
-import 'presentation/app/styles/style.dart';
+import 'presentation/app/styles/themes/default/export.dart';
 
 void main() {
   Main();
 }
 
 class Main extends Env {
+  final _devicePreview = false;
+
   @override
   FutureOr<Widget> onCreate() async {
     ErrorWidget.builder = (FlutterErrorDetails details) {
@@ -21,15 +23,22 @@ class Main extends Env {
       return Container(color: Colors.transparent);
     };
 
-    await Style.styleDefault();
 
-    return DevicePreview(
-      enabled: !kReleaseMode,
-      builder: (context) =>const Application(
-        title: 'Base Stag',
-        locale: 'vi',
-      ),
-    );
+    await LightStyle.getStyle();
+
+    return _devicePreview
+        ? DevicePreview(
+            // enabled: !kReleaseMode,
+            enabled: false,
+            builder: (context) => const Application(
+              title: 'Base Stag',
+              locale: 'vi',
+            ),
+          )
+        : const Application(
+            title: 'Base Stag',
+            locale: 'vi',
+          );
   }
 
   @override

@@ -1,5 +1,7 @@
 import 'dart:async';
+import 'package:base_flutter/data/sources/remote/auth/auth_remote_source.dart';
 import 'package:dio/dio.dart';
+
 import 'package:base_flutter/@core/di/di_module.dart';
 import 'package:base_flutter/@core/environment/build_config.dart';
 import 'package:base_flutter/@core/network/interceptor/auth_interceptor.dart';
@@ -10,9 +12,8 @@ class ApiModule extends DIModule {
   provides() async {
     final dio = await setup();
     getIt.registerSingleton(dio);
-    // register api
-    // getIt.registerFactory(
-    //         () => AccountRemoteSource(dio, baseUrl: dio.options.baseUrl));
+
+    getIt.registerFactory(() => AuthRemoteSource());
   }
 
   static FutureOr<Dio> setup() async {
@@ -28,7 +29,7 @@ class ApiModule extends DIModule {
     );
     final Dio dio = Dio(options);
 
-    /// Unified add authentication request header
+    /// Unified add auth request header
     dio.interceptors.add(AuthInterceptor());
 
     /// Adapt data (according to your own data structure, you can choose to add it)

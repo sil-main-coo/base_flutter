@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "cancel": MessageLookupByLibrary.simpleMessage("Hủy"),
         "connectionProblem": MessageLookupByLibrary.simpleMessage(
             "Lỗi kết nối. Vui lòng thử lại"),
         "connectionTimedOut": MessageLookupByLibrary.simpleMessage(
@@ -34,8 +35,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Thông tin không hợp lệ"),
         "responseNull":
             MessageLookupByLibrary.simpleMessage("Không có phản hồi"),
+        "select": MessageLookupByLibrary.simpleMessage("Chọn"),
         "systemError": MessageLookupByLibrary.simpleMessage(
             "Lỗi hệ thống. Vui lòng thử lại"),
+        "tryAgain": MessageLookupByLibrary.simpleMessage("Thử lại"),
         "unKnowError": MessageLookupByLibrary.simpleMessage(
             "Đã xảy ra lỗi. Vui lòng thử lại")
       };

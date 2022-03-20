@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 import 'package:base_flutter/@core/network/interceptor/token_interceptor.dart';
 import 'package:base_flutter/generated/l10n.dart';
 
-import 'response_error.dart';
+import '../../@core/network/response_error.dart';
 
 class ApiException {
   String? errorCode;
@@ -14,12 +14,11 @@ class ApiException {
     switch (exception?.type) {
       case DioErrorType.response:
         {
-
           dynamic errorBody = exception?.response?.data ?? "";
           try {
             // try to parse to response error
             ResponseError responseError = ResponseError.fromJson(errorBody);
-            errorMessage = responseError.message;
+            errorMessage = responseError.message ?? 'Unknown';
             errorCode = responseError.errorCode;
 
             // map 401 to meaningful messages
@@ -30,11 +29,10 @@ class ApiException {
             }
 
             // map 500 to meaningful msg
-            if (responseError.statusCode >= 400) {
+            if (responseError.statusCode! >= 400) {
               errorMessage = S.current.systemError;
               return;
             }
-
           } catch (e) {
             errorMessage = e.toString();
 
@@ -66,7 +64,7 @@ class ApiException {
                   errorMessage = S.current.connectionProblem;
                 } else if (exception?.error is HttpException) {
                   errorMessage = S.current.connectionProblem;
-                }else{
+                } else {
                   errorMessage = S.current.systemError;
                 }
               }

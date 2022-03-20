@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
         "connectionProblem": MessageLookupByLibrary.simpleMessage(
             "There are some problems with the connection. Please try again"),
         "connectionTimedOut": MessageLookupByLibrary.simpleMessage(
@@ -34,8 +35,10 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Invalid credentials"),
         "responseNull":
             MessageLookupByLibrary.simpleMessage("Response is null"),
+        "select": MessageLookupByLibrary.simpleMessage("Select"),
         "systemError": MessageLookupByLibrary.simpleMessage(
             "System error. Please try again"),
+        "tryAgain": MessageLookupByLibrary.simpleMessage("Try again"),
         "unKnowError": MessageLookupByLibrary.simpleMessage(
             "Error! An error occurred. Please try again later. Please try again")
       };

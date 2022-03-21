@@ -24,7 +24,7 @@ class Main extends Env {
     };
 
 
-    await LightStyle.getStyle();
+    await OverlayStyle.getStyle();
 
     return _devicePreview
         ? DevicePreview(

@@ -1,6 +1,6 @@
 part of 'export.dart';
 
-class LightStyle {
+class DarkStyle {
   static Future getStyle() async {
     SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
         statusBarColor: DarkColor.mStatusColor,

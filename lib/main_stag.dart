@@ -18,7 +18,7 @@ class Main extends Env {
       return Container(color: Colors.transparent);
     };
 
-    await LightStyle.getStyle();
+    await OverlayStyle.getStyle();
 
     return const Application(
       title: 'Base Stag',

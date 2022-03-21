@@ -10,7 +10,7 @@ import 'text_input_formatters/number_text_input_formatter.dart';
 class AppTextField extends StatefulWidget {
   AppTextField(
       {Key? key,
-      this.isRedTextWhenError = true,
+      this.isRedTextWhenError = false,
       this.contentPadding,
       this.inputBorder = const UnderlineInputBorder(),
       this.initialValue,
@@ -342,7 +342,9 @@ class _AppTextFieldState extends State<AppTextField> {
                 hintText: widget.hintText,
                 hintStyle: hintStyle,
                 errorStyle: errorStyle,
-                errorText: widget.errorText,
+                errorText: widget.errorText != null && widget.errorText!.isEmpty
+                    ? null
+                    : widget.errorText,
                 enabledBorder: widget.inputBorder.copyWith(
                   borderSide: BorderSide(color: mBorderLineColor),
                   //  when the TextFormField in unfocused

@@ -2,43 +2,50 @@ import 'package:base_flutter/generated/l10n.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'package:meta/meta.dart';
+import 'validator_enum.dart';
 import 'package:base_flutter/commons/extentions/string_extension.dart';
 
 part 'validator_state.dart';
 
 class ValidatorCubit extends Cubit<ValidatorState> {
-  int fieldsTotal;
-
-  ValidatorCubit({this.fieldsTotal = 1})
+  ValidatorCubit({required this.keys})
       : super(const ValidatorChangedState.init()) {
-    _errors = List.generate(fieldsTotal, (index) => '');
+    _errors = {};
+    for (var element in keys) {
+      _errors[element] = '';
+    }
+    emit(ValidatorChangedState.init(errors: _errors));
   }
 
-  late List<String?> _errors;
+  final List<Validator> keys;
+  late Map<Validator, String?> _errors;
 
-  /// Method: validate user name
-  void validateUserName(String value) {
-    if (value.isEmpty) {
-      emit(const ValidatorChangedState.init());
+  void _emitSuccess(Validator key, String value) {
+    emit(ValidatorChangedState.success(
+        value: value, errors: _errors..[key] = null));
+  }
+
+  void _emitFailure(Validator key, String message, [String? value]) {
+    _errors[key] = message;
+    emit(ValidatorChangedState.failure(errors: _errors, value: value));
+  }
+
+  /// Method: validate input username field
+  void validateUsername(String username) {
+    if (username.length < 4) {
+      _emitFailure(Validator.userName, 'Invalid user name');
       return;
     }
-
-    if (value.length >= 3) {
-      emit(ValidatorChangedState.success(value: value));
-      return;
-    }
-
-    emit(const ValidatorChangedState.failure(errors: ['Invalid user name']));
+    _emitSuccess(Validator.userName, username);
   }
 
   /// Method: validate input password field
-  void validateInputPassword(String password) {
+  void validatePassword(String password) {
     if (!_isPassword(password)) {
-      _errors[0] = 'Invalid pwd';
-      emit(ValidatorChangedState.failure(errors: _errors));
+      _emitFailure(Validator.password, 'Invalid password');
       return;
     }
-    emit(ValidatorChangedState.success(value: password));
+    _emitSuccess(Validator.password, password);
   }
 
   bool _isPassword(String password) {

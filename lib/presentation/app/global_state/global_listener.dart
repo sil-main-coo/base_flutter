@@ -3,7 +3,7 @@ import 'package:base_flutter/generated/l10n.dart';
 import 'package:base_flutter/presentation/app/app.dart';
 import 'package:base_flutter/presentation/components/dialogs/action_dialogs.dart';
 import 'package:base_flutter/presentation/components/dialogs/loader_dialog.dart';
-import 'package:base_flutter/presentation/journey/auth/sign_in_route.dart';
+import 'package:base_flutter/presentation/journey/auth/auth_route.dart';
 import 'package:base_flutter/presentation/journey/main/main_route.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'auth_cubit/auth_cubit.dart';
@@ -15,8 +15,9 @@ List<BlocListener> get globalListeners => [
         switch (state.runtimeType) {
           case Authenticated:
             if ((state as Authenticated).autoPush) {
-              Application.navigator.pushReplacementNamed(
+              Application.navigator.pushNamedAndRemoveUntil(
                 MainRoute.main,
+                (route) => false,
               );
             }
             return;

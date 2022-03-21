@@ -1,28 +1,41 @@
 part of 'validator_cubit.dart';
 
-@immutable
 abstract class ValidatorState extends Equatable {
-  final bool isValid;
   final String? value;
-  final List<String?>? errors;
+  final Map<Validator, String?>? errors;
+  final bool initFlag;
 
-  const ValidatorState({this.isValid = false, this.value, this.errors});
+  const ValidatorState({this.value, this.errors, this.initFlag = false});
+
+  bool isValid() {
+    if (initFlag) return false;
+
+    if (errors != null) {
+      for (var v in errors!.values) {
+        if (v != null) {
+          return false;
+        }
+      }
+    }
+
+    return true;
+  }
 
   @override
   List<Object> get props =>
-      [isValid, if (value != null) value!, if (errors != null) errors!];
+      [if (value != null) value!, if (errors != null) errors!, initFlag];
 }
 
 class ValidatorChangedState extends ValidatorState {
-  const ValidatorChangedState.init()
-      : super(
-          isValid: false,
-        );
+  const ValidatorChangedState.init(
+      {String? value, Map<Validator, String?>? errors})
+      : super(value: value, errors: errors, initFlag: true);
 
-  const ValidatorChangedState.success({String? value})
-      : super(isValid: true, value: value, errors: const []);
+  const ValidatorChangedState.success(
+      {String? value, Map<Validator, String?>? errors})
+      : super(value: value, errors: errors);
 
   const ValidatorChangedState.failure(
-      {String? value, List<String?>? errors, int? offset})
-      : super(isValid: false, value: value, errors: errors);
+      {String? value, required Map<Validator, String?> errors})
+      : super(value: value, errors: errors);
 }

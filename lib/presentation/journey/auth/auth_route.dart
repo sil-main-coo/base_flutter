@@ -1,5 +1,7 @@
 import 'package:base_flutter/@core/di/di_module.dart';
 import 'package:base_flutter/@core/route/route_define.dart';
+import 'package:base_flutter/presentation/app/global_state/validator_cubit/validator_cubit.dart';
+import 'package:base_flutter/presentation/app/global_state/validator_cubit/validator_enum.dart';
 import 'package:base_flutter/presentation/journey/auth/forgot_password/forgot_password_page.dart';
 import 'package:base_flutter/presentation/journey/auth/sign_in/cubit/sign_in_cubit.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,6 +21,9 @@ class AuthRoute extends RouteDefine {
             providers: (context) => [
                   BlocProvider<SignInCubit>(
                       create: (_) => getIt.get<SignInCubit>()),
+                  BlocProvider<ValidatorCubit>(
+                      create: (_) => ValidatorCubit(
+                          keys: [Validator.userName, Validator.password])),
                 ]),
         Path(name: signUp, page: const SignUpPage()),
         Path(name: forgotPassword, page: const ForgotPasswordPage()),

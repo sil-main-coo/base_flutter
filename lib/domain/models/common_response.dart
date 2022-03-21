@@ -10,7 +10,7 @@ class CommonResponse {
     errorDetail = json['errorDetail'];
     httpStatusCode = json['httpStatusCode'] ?? 0;
     message = json['message'];
-    messageCode = json['messageCode'] ?? 0;
+    messageCode = json['messageCode'] ?? '0';
     success = json['success'] ?? false;
     total = json['total'];
   }

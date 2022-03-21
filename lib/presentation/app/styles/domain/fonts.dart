@@ -53,7 +53,7 @@ class AppTextTheme {
       button: TextStyle(
           fontSize: fzButton,
           fontWeight: FontWeight.w600,
-          color: mPrimaryTextColor),
+          color: mTextWhiteColor),
       caption: TextStyle(
           fontSize: fzCaption1,
           fontWeight: FontWeight.w400,

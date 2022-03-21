@@ -1,7 +1,5 @@
-import 'package:base_flutter/presentation/journey/auth/sign_in_route.dart';
+import 'package:base_flutter/presentation/journey/auth/auth_route.dart';
 import 'package:base_flutter/presentation/journey/main/main_route.dart';
-import 'package:base_flutter/presentation/journey/module1/module1_route.dart';
-import 'package:base_flutter/presentation/journey/module2/module2_route.dart';
 import 'package:base_flutter/presentation/journey/splash/splash_route.dart';
 import 'package:flutter/material.dart';
 
@@ -10,8 +8,6 @@ class AppRoute {
 
   static void generateRoute(
       Map<String?, WidgetBuilder?>? builders, RouteSettings settings) {
-    Module1Route().build(builders, settings);
-    Module2Route().build(builders, settings);
     SplashRoute().build(builders, settings);
     AuthRoute().build(builders, settings);
     MainRoute().build(builders, settings);

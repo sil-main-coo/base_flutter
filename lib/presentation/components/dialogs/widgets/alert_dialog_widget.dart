@@ -1,3 +1,4 @@
+import 'package:base_flutter/presentation/app/styles/domain/export.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -30,7 +31,8 @@ class AlertDialogWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final titleStyle = Theme.of(context).textTheme.subtitle1;
-    final btnStyle = Theme.of(context).textTheme.button;
+    final btnStyle =
+        Theme.of(context).textTheme.button?.copyWith(color: mPrimaryColor);
 
     return WillPopScope(
       onWillPop: () async => barrierDismissible,

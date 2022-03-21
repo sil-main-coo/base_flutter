@@ -101,6 +101,7 @@ class Dimens {
   static double width_24 = 24.w;
   static double width_27 = 27.w;
   static double width_30 = 30.w;
+  static double width_32 = 32.w;
   static double width_34 = 34.w;
   static double width_40 = 40.w;
   static double width_50 = 50.w;

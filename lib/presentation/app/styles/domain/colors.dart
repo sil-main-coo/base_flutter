@@ -12,8 +12,9 @@ final Color mDescriptionColor = HexColor.fromHex('#4D6678');
 final Color mBorderLineColor = HexColor.fromHex('#E3EBF0');
 final Color mNoActiveColor = mPlaceholderColor;
 
-final Color mPrimaryTextColor = HexColor.fromHex('#FFFFFF');
-final Color mBadTextColor = Colors.red;
+final Color mPrimaryTextColor = HexColor.fromHex('#000000');
+final Color mTextWhiteColor = HexColor.fromHex('#FFFFFF');
+const Color mBadTextColor = Colors.red;
 final Color mTextButtonDark = mDescriptionColor;
 
 final Color mPrimaryIconColor = HexColor.fromHex('#FFFFFF');

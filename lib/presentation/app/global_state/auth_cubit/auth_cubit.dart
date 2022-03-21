@@ -1,4 +1,5 @@
 import 'package:base_flutter/@core/local/sessions/sessions_pref.dart';
+import 'package:base_flutter/domain/models/auth/signin.dart';
 import 'package:base_flutter/domain/repositories/auth_repository.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
@@ -20,6 +21,10 @@ class AuthCubit extends Cubit<AuthState> {
     }
 
     emit(Authenticated(token: token, autoPush: true));
+  }
+
+  void signedIn(SignInResponse response) {
+    emit(Authenticated(token: response.accessToken!, autoPush: true));
   }
 
   Future signedOut() async {

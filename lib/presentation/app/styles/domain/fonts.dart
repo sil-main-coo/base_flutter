@@ -140,4 +140,14 @@ extension ThemeExtension on TextTheme {
       fontSize: AppTextTheme.fzCaption1,
       fontWeight: FontWeight.w600,
       color: mDescriptionColor);
+
+  TextStyle get textAction => TextStyle(
+      fontSize: AppTextTheme.fzButton,
+      fontWeight: FontWeight.w600,
+      color: mPrimaryTextColor);
+
+  TextStyle get buttonDark => TextStyle(
+      fontSize: AppTextTheme.fzButton,
+      fontWeight: FontWeight.w600,
+      color: mTextButtonDark);
 }

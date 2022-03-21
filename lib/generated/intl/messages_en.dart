@@ -33,11 +33,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "failure": MessageLookupByLibrary.simpleMessage("Failure"),
         "invalidCredentials":
             MessageLookupByLibrary.simpleMessage("Invalid credentials"),
+        "option": MessageLookupByLibrary.simpleMessage("Option"),
         "responseNull":
             MessageLookupByLibrary.simpleMessage("Response is null"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "select": MessageLookupByLibrary.simpleMessage("Select"),
+        "selectPicture": MessageLookupByLibrary.simpleMessage("Select picture"),
         "systemError": MessageLookupByLibrary.simpleMessage(
             "System error. Please try again"),
+        "takePicture": MessageLookupByLibrary.simpleMessage("Take picture"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Try again"),
         "unKnowError": MessageLookupByLibrary.simpleMessage(
             "Error! An error occurred. Please try again later. Please try again")

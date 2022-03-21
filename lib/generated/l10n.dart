@@ -169,6 +169,46 @@ class S {
       args: [],
     );
   }
+
+  /// `Lưu`
+  String get save {
+    return Intl.message(
+      'Lưu',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chụp ảnh`
+  String get takePicture {
+    return Intl.message(
+      'Chụp ảnh',
+      name: 'takePicture',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chọn ảnh`
+  String get selectPicture {
+    return Intl.message(
+      'Chọn ảnh',
+      name: 'selectPicture',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Tùy chọn`
+  String get option {
+    return Intl.message(
+      'Tùy chọn',
+      name: 'option',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

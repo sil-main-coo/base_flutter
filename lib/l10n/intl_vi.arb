@@ -11,5 +11,9 @@
   "systemError": "Lỗi hệ thống. Vui lòng thử lại",
   "tryAgain": "Thử lại",
   "select": "Chọn",
-  "cancel": "Hủy"
+  "cancel": "Hủy",
+  "save": "Lưu",
+  "takePicture": "Chụp ảnh",
+  "selectPicture": "Chọn ảnh",
+  "option": "Tùy chọn"
 }

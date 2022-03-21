@@ -33,11 +33,15 @@ class MessageLookup extends MessageLookupByLibrary {
         "failure": MessageLookupByLibrary.simpleMessage("Thất bại"),
         "invalidCredentials":
             MessageLookupByLibrary.simpleMessage("Thông tin không hợp lệ"),
+        "option": MessageLookupByLibrary.simpleMessage("Tùy chọn"),
         "responseNull":
             MessageLookupByLibrary.simpleMessage("Không có phản hồi"),
+        "save": MessageLookupByLibrary.simpleMessage("Lưu"),
         "select": MessageLookupByLibrary.simpleMessage("Chọn"),
+        "selectPicture": MessageLookupByLibrary.simpleMessage("Chọn ảnh"),
         "systemError": MessageLookupByLibrary.simpleMessage(
             "Lỗi hệ thống. Vui lòng thử lại"),
+        "takePicture": MessageLookupByLibrary.simpleMessage("Chụp ảnh"),
         "tryAgain": MessageLookupByLibrary.simpleMessage("Thử lại"),
         "unKnowError": MessageLookupByLibrary.simpleMessage(
             "Đã xảy ra lỗi. Vui lòng thử lại")

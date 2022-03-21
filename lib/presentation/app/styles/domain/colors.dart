@@ -16,5 +16,6 @@ final Color mPrimaryTextColor = HexColor.fromHex('#000000');
 final Color mTextWhiteColor = HexColor.fromHex('#FFFFFF');
 const Color mBadTextColor = Colors.red;
 final Color mTextButtonDark = mDescriptionColor;
+final Color mBodyTextColor = HexColor.fromHex('#08121E');
 
 final Color mPrimaryIconColor = HexColor.fromHex('#FFFFFF');

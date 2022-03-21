@@ -11,5 +11,9 @@
   "error": "Error",
   "tryAgain": "Try again",
   "select": "Select",
-  "cancel": "Cancel"
+  "cancel": "Cancel",
+  "save": "Save",
+  "takePicture": "Take picture",
+  "selectPicture": "Select picture",
+  "option": "Option"
 }
